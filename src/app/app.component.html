@@ -1,0 +1,36 @@
+<form [formGroup]="userForm" (ngSubmit)="onClickSubmit()">
+  <div class="form-group">
+    <label >Nombres</label>
+    <input class="form-control" type="text" formControlName="firstName">
+  </div>
+  <div class="form-group">
+    <label>Primer Apellido</label>
+    <input  class="form-control" type="text" formControlName="lastName1">
+  </div>
+
+  <div class="form-group">
+    <label>Segundo Apellido</label>
+    <input  class="form-control" type="text" formControlName="lastName2">
+  </div>
+  <div class="form-group">
+    <label>Fecha de Nacimiento</label>
+    <input  class="form-control" type="date" formControlName="birthDate">
+  </div>
+  <div class="form-group">
+    <label>Correo electrónico</label>
+    <input  class="form-control" type="email" formControlName="email">
+  </div>
+
+<div class="form-group">
+  <label>Contraseña</label>
+  <input class="form-control" type="password" formControlName="password">
+</div>
+
+<div class="form-group">
+  <label>Confirmar contraseña:</label>
+  <input class="form-control" type="password" formControlName="confirmPassword">
+</div>
+
+
+  <button class="mt-2 btn btn-primary" type="submit" [disabled]="userForm.invalid">Submit</button>
+</form>
